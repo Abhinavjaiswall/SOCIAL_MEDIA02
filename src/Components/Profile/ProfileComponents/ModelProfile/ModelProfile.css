@@ -1,0 +1,76 @@
+.modelForm {
+    margin-top: 20px;
+}
+
+.row1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.modelForm .inputBox1 {
+    width: 100%;
+    margin-bottom: 30px;
+    height: 50px;
+}
+
+.modelForm .inputBox1 input {
+    width: 100%;
+    height: 100%;
+    padding: 0px 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* light grey border */
+    outline: none;
+    background-color: #ffffff; /* white input background */
+    color: #333; /* dark grey text */
+}
+
+.modelForm .inputBox1 input:focus {
+    border: 1px solid #3399ff; /* blue focus border */
+}
+
+.modelBtn {
+    font-size: 16px;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    background: #3399ff; /* blue button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.modelBtn:hover {
+    background: #66ccff; /* lighter blue on hover */
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+@media screen and (max-width:430px){
+    .modelForm {
+        margin-top: 10px;
+    }
+
+    .row1 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+
+    .modelForm .inputBox1 {
+        height: 40px;
+    }
+
+    .modelBtn {
+        font-size: 14px;
+        padding: 5px 10px;
+        background: #3399ff; /* blue button */
+    }
+
+    .modelBtn:hover {
+        background: #66ccff; /* lighter blue hover */
+    }
+}

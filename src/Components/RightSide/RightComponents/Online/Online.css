@@ -1,0 +1,117 @@
+/* ===================== ONLINE COMPONENT ===================== */
+.online-comp {
+    width: 100%;
+    min-height: 200px;
+    padding: 10px 15px 10px 20px;
+    border-radius: 20px;
+    background-color: #ffffff; /* white background */
+    margin-top: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* subtle shadow */
+}
+
+.online-comp h2 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: grey;
+    font-weight: 500;
+}
+
+.online-people {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.online-people img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #66ccff; /* light blue border for theme */
+}
+
+/* green online indicator */
+.online-people::before {
+    content: "";
+    position: absolute;
+    background-color: #00c853; /* bright green for online */
+    width: 12px;
+    height: 12px;
+    top: 2px;
+    left: 34px;
+    border-radius: 50%;
+    border: 2px solid #fff; /* white border for visibility */
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+@media screen and (max-width:1024px){
+    .online-comp {
+        padding: 10px 10px;
+        border-radius: 10px;
+        margin-top: 5px;
+    }
+    .online-comp h2 {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .online-people {
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+    .online-people img {
+        width: 40px;
+        height: 40px;
+    }
+    .online-people::before {
+        width: 10px;
+        height: 10px;
+        left: 30px;
+        top: 2px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .online-comp {
+        padding: 10px 15px 10px 20px;
+        border-radius: 15px;
+    }
+    .online-comp h2 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .online-people img {
+        width: 45px;
+        height: 45px;
+    }
+    .online-people::before {
+        width: 12px;
+        height: 12px;
+        left: 34px;
+        top: 2px;
+    }
+}
+
+@media screen and (max-width:430px){
+    .online-comp {
+        padding: 8px 10px;
+        border-radius: 10px;
+    }
+    .online-comp h2 {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .online-people img {
+        width: 35px;
+        height: 35px;
+    }
+    .online-people::before {
+        width: 10px;
+        height: 10px;
+        left: 28px;
+        top: 2px;
+    }
+}
