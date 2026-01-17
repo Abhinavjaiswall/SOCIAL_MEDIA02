@@ -1,0 +1,126 @@
+/* Overall Comment Container */
+.overAllCommentList {
+    margin-bottom: 30px;
+    background-color: #f0f8ff; /* Light blue background for the whole comment area */
+    padding: 10px 0px;
+    border-radius: 10px;
+}
+
+/* Individual Comment List */
+.commentList {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Comment Header */
+.commentHead {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Comment content wrapper */
+.commentList .commentList1 {
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+    width: min-content;
+}
+
+.commentList .commentList1 .commentHead span {
+    font-weight: 500;
+    font-size: 20px;
+    padding-right: 10px;
+    color: #1a1a1a; /* Darker text for better contrast */
+}
+
+.commentList .commentList1 .commentHead p {
+    line-height: 23px;
+    color: #333;
+}
+
+/* Commenter Image */
+.commentList .commentList1 img {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #add8e6; /* Light blue border */
+}
+
+/* Action section (like reply) */
+.commentList2 {
+    flex: 0.5;
+}
+
+.commentList2 p {
+    text-align: end;
+    color: #0077b6; /* Blue color for actions instead of orangered */
+    font-weight: 500;
+}
+
+/* Comment Footer (likes, reply, etc.) */
+.commentFooter {
+    display: flex;
+    gap: 15px;
+    padding-left: 60px;
+    padding-top: 8px;
+    font-size: 15px;
+    color: #555;
+}
+
+.commentFooter h4 {
+    font-weight: 500;
+}
+
+/* ====================== */
+/* Mobile Responsive Styles */
+@media screen and (max-width: 430px) {
+    .overAllCommentList {
+        margin-bottom: 20px;
+        padding: 5px;
+    }
+
+    .commentHead {
+        gap: 10px;
+    }
+
+    .commentList .commentList1 .commentHead span {
+        font-size: 15px;
+        padding-right: 0;
+        font-weight: 500;
+    }
+
+    .commentList .commentList1 .commentHead p {
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+    }
+
+    .commentList .commentList1 img {
+        width: 35px;
+        height: 35px;
+        border: 1.5px solid #add8e6; /* Light blue border on mobile */
+    }
+
+    .commentList2 {
+        flex: 0.3;
+    }
+
+    .commentList2 p {
+        text-align: end;
+        color: #0077b6;
+    }
+
+    .commentList2 svg {
+        font-size: 18px;
+    }
+
+    .commentFooter {
+        padding-left: 45px;
+        padding-top: 5px;
+        font-size: 12px;
+    }
+}

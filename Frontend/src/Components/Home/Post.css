@@ -1,0 +1,325 @@
+/* =========================
+   Post Container & Header
+   ========================= */
+.post {
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f0f8ff; /* Light blue background */
+}
+
+/* Post Image */
+.post .post-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+/* Post Header */
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.post-user {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.post-user .p-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #add8e6; /* Light blue border */
+}
+
+.post-user h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0077b6; /* Blue text instead of orangered */
+}
+
+.post-user .datePara {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Post Body */
+.post .body {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 29px;
+    color: #1a1a1a; /* Dark text for readability */
+}
+
+/* =========================
+   Post Footer & Likes
+   ========================= */
+.post-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.like-icons {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    color: #0077b6; /* Blue icons */
+    width: 100%;
+}
+
+.like-icons svg {
+    font-size: 34px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.like-icons svg:hover {
+    transform: scale(1.1);
+    color: #1e90ff; /* Slightly darker blue on hover */
+}
+
+.post-like,
+.post-comment {
+    font-size: 18px;
+    cursor: pointer;
+    color: #0077b6; /* Blue text */
+}
+
+.like-comment-details {
+    margin-top: 15px;
+    color: #555;
+}
+
+/* =========================
+   Delete Options
+   ========================= */
+.delete {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+}
+
+.delete .post-vertical-icon {
+    font-size: 34px;
+    cursor: pointer;
+    color: #0077b6; /* Blue icon */
+}
+
+.options {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #e6f2ff; /* Very light blue */
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 999;
+}
+
+.delete button {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    color: #0077b6;
+}
+
+.delete button:hover {
+    background-color: #d0e7ff; /* Light hover effect */
+}
+
+/* =========================
+   Comment Section
+   ========================= */
+.commentSection {
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #e6f2ff; /* Light blue */
+    padding: 15px 20px;
+}
+
+.sticky {
+    height: 280px;
+    overflow-y: scroll;
+}
+
+.cmtGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.cmtGroup input {
+    width: 100%;
+    height: 50px;
+    padding: 5px 50px;
+    border: 1px solid #add8e6;
+    border-radius: 10px;
+    outline: none;
+    font-size: 17px;
+    background-color: #fff;
+    color: #1a1a1a;
+}
+
+.cmtGroup input:focus {
+    outline: 1px solid #0077b6;
+}
+
+.cmtGroup .emoji {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #0077b6;
+}
+
+.cmtGroup .send {
+    margin-left: 10px;
+    color: #0077b6;
+    cursor: pointer;
+}
+
+/* =========================
+   Social Buttons
+   ========================= */
+.social-buttons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    position: absolute;
+    bottom: -10px;
+    left: 200px;
+    padding: 3px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 32px -7px #add8e6;
+    background-color: #fff;
+    z-index: 300;
+}
+
+.social-margin {
+    margin: 10px 13px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid #0077b6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.social-icon .social-links {
+    font-size: 23px;
+    color: #0077b6;
+}
+
+/* =========================
+   Mobile Styles
+   ========================= */
+@media screen and (max-width: 430px) {
+    .post {
+        padding: 15px 0 5px 0;
+        margin-bottom: 35px;
+        border-radius: 0;
+    }
+    .post .post-img {
+        height: 330px;
+        border-radius: 0;
+    }
+    .post-footer {
+        margin: 0 8px;
+        background-color: #f0f8ff;
+    }
+    .like-icons {
+        gap: 20px;
+    }
+    .like-icons svg {
+        font-size: 25px;
+    }
+    .post-like,
+    .post-comment {
+        font-size: 13px;
+    }
+    .post .body {
+        margin: 0 8px 15px 8px;
+        font-size: 13px;
+        line-height: 25px;
+    }
+    .post-header {
+        margin-bottom: 15px;
+        padding: 0 10px;
+    }
+    .post-user .datePara {
+        font-size: 11px;
+    }
+    .post-user h2 {
+        font-size: 15px;
+    }
+    .delete .post-vertical-icon {
+        font-size: 25px;
+    }
+    .options {
+        width: 260px;
+        top: 40px;
+        padding: 5px 8px;
+    }
+    .delete button {
+        padding: 8px 0;
+        font-size: 11px;
+    }
+    .commentSection {
+        padding: 10px;
+    }
+    .sticky {
+        height: 240px;
+    }
+    .cmtGroup input {
+        height: 42px;
+        padding: 5px 50px 5px 46px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+    .cmtGroup svg {
+        font-size: 26px;
+    }
+    .cmtGroup .emoji {
+        left: 20px;
+    }
+    .social-buttons {
+        grid-template-columns: repeat(3, 1fr);
+        left: 150px;
+        border-radius: 10px;
+        padding: 0;
+    }
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .social-icon .social-links {
+        font-size: 20px;
+    }
+}
